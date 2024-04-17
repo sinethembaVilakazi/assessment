@@ -1,4 +1,4 @@
-package com.enviro.assessment.grad001.SinethembaVilakazimain.Persistance;
+package com.enviro.assessment.grad001.SinethembaVilakazimain.Model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

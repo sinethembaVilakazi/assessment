@@ -1,4 +1,4 @@
-package com.enviro.assessment.grad001.SinethembaVilakazimain.Persistance;
+package com.enviro.assessment.grad001.SinethembaVilakazimain.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,17 +23,12 @@ public class WasteCategory {
     private String description;
 
     @NotNull
-    private boolean liquidWaste;
+    private boolean biodegradable;
 
-    @NotNull
-    private boolean solidWaste;
+    @NotBlank
+    @Size(max = 50)
+    private String type;
 
-    @NotNull
-    private boolean organicWaste;
-
-
-    @NotNull
-    private boolean recyclable;
 
 
 
@@ -61,35 +56,19 @@ public class WasteCategory {
         this.description = description;
     }
 
-    public boolean isLiquidWaste() {
-        return liquidWaste;
+    public boolean isBiodegradable() {
+        return biodegradable;
     }
 
-    public void setLiquidWaste(boolean liquidWaste) {
-        this.liquidWaste = liquidWaste;
+    public void setBiodegradable(boolean biodegradable) {
+        this.biodegradable = biodegradable;
     }
 
-    public boolean isSolidWaste() {
-        return solidWaste;
+    public String getType() {
+        return type;
     }
 
-    public void setSolidWaste(boolean solidWaste) {
-        this.solidWaste = solidWaste;
-    }
-
-    public boolean isOrganicWaste() {
-        return organicWaste;
-    }
-
-    public void setOrganicWaste(boolean organicWaste) {
-        this.organicWaste = organicWaste;
-    }
-
-    public boolean isRecyclable() {
-        return recyclable;
-    }
-
-    public void setRecyclable(boolean recyclable) {
-        this.recyclable = recyclable;
+    public void setType(String type) {
+        this.type = type;
     }
 }

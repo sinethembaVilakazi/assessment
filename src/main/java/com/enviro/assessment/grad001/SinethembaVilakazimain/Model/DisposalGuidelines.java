@@ -1,4 +1,4 @@
-package com.enviro.assessment.grad001.SinethembaVilakazimain.Persistance;
+package com.enviro.assessment.grad001.SinethembaVilakazimain.Model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -21,7 +21,9 @@ public class DisposalGuidelines {
     @NotNull
     private boolean hazardous;
 
-    private String materialType;
+    @NotBlank
+    @Size(max = 500)
+    private String disposalMethods;  //disposal methods should be stored in a comma-separated list
 
     public Long getId() {
         return id;
@@ -53,6 +55,13 @@ public class DisposalGuidelines {
 
     public void setHazardous(boolean hazardous) {
         this.hazardous = hazardous;
+    }
+
+    public String getDisposalMethods() {
+        return disposalMethods;
+    }
+    public void setDisposalMethods(String disposalMethods) {
+        this.disposalMethods = disposalMethods;
     }
 }
 
