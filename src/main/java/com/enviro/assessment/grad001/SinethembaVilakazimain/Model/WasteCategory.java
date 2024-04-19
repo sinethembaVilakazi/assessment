@@ -1,36 +1,38 @@
 package com.enviro.assessment.grad001.SinethembaVilakazimain.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity
+@Table(name = "waste_categories")
 public class WasteCategory {
+    public WasteCategory(Long id, String categoryName, boolean biodegradable, String type) {
+    this.id = id;
+    this.categoryName = categoryName;
+    this.biodegradable = biodegradable;
+    this.type = type;
+}
+    public WasteCategory(){
+
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
+//    @NotBlank
     @Size(max = 200)
-    private  String name;
+    private  String categoryName;
 
-    @NotBlank
-    @Size(max = 500)
-    private String description;
 
     @NotNull
     private boolean biodegradable;
 
-    @NotBlank
+//    @NotBlank
     @Size(max = 50)
     private String type;
-
-
-
 
     public Long getId() {
         return id;
@@ -40,21 +42,14 @@ public class WasteCategory {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     public boolean isBiodegradable() {
         return biodegradable;

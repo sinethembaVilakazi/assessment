@@ -6,16 +6,26 @@ import jakarta.validation.constraints.Size;
 
 @Entity
 public class RecyclingTip {
+
+    public RecyclingTip() {
+    }
+
+    public RecyclingTip(Long id, WasteCategory wasteCategory, String categoryName, String tip) {
+        this.id = id;
+        this.wasteCategory = wasteCategory;
+        this.categoryName = categoryName;
+        this.tip = tip;
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
     private WasteCategory wasteCategory;
+    @ManyToOne
+    private  String categoryName;
 
-    @NotBlank
-    @Size(max =100)
-    private String title;
+
 
     @NotBlank
     @Size(max =1000)
@@ -37,19 +47,19 @@ public class RecyclingTip {
         this.wasteCategory = wasteCategory;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getTip() {
         return tip;
     }
 
     public void setTip(String tip) {
         this.tip = tip;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 }
