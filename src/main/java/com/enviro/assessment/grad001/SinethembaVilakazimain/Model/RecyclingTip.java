@@ -5,14 +5,14 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 @Entity
+@Table(name = "recycling_tips")
 public class RecyclingTip {
 
     public RecyclingTip() {
     }
 
-    public RecyclingTip(Long id, WasteCategory wasteCategory, String categoryName, String tip) {
+    public RecyclingTip(Long id, String categoryName, String tip) {
         this.id = id;
-        this.wasteCategory = wasteCategory;
         this.categoryName = categoryName;
         this.tip = tip;
     }
@@ -22,7 +22,7 @@ public class RecyclingTip {
 
     @ManyToOne
     private WasteCategory wasteCategory;
-    @ManyToOne
+
     private  String categoryName;
 
 

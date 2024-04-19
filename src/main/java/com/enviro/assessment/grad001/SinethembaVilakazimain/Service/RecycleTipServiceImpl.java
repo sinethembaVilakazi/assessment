@@ -20,7 +20,7 @@ public class RecycleTipServiceImpl implements RecyclingTipService{
      */
     @Override
     public RecyclingTip createRecyclingTip(RecyclingTip recyclingTip) {
-        return recycleTipRepository.saveAndFlush(recyclingTip);
+        return recycleTipRepository.save(recyclingTip);
     }
 
     /**

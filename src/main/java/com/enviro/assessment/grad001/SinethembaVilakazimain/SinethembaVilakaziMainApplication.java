@@ -8,6 +8,13 @@ public class SinethembaVilakaziMainApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SinethembaVilakaziMainApplication.class, args);
+		System.out.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" +
+				"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" +
+				"LET'S RECYCLE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" +
+						"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" +
+						"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"");
+
+
 	}
 
 }
