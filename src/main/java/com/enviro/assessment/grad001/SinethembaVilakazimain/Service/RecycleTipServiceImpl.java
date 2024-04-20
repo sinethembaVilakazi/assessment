@@ -1,7 +1,6 @@
 package com.enviro.assessment.grad001.SinethembaVilakazimain.Service;
 
 import com.enviro.assessment.grad001.SinethembaVilakazimain.Model.RecyclingTip;
-import com.enviro.assessment.grad001.SinethembaVilakazimain.Model.WasteCategory;
 import com.enviro.assessment.grad001.SinethembaVilakazimain.Repository.RecycleTipRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -62,12 +61,8 @@ public class RecycleTipServiceImpl implements RecyclingTipService{
         recycleTipRepository.deleteById(id);
     }
 
-    /**
-     * @param wasteCategory
-     * @return
-     */
     @Override
-    public List<RecyclingTip> getRecyclingTipsByWasteCategory(WasteCategory wasteCategory) {
-        return recycleTipRepository.findByWasteCategory(wasteCategory);
+    public List<RecyclingTip> getRecyclingTipsByCategoryName(String categoryName) {
+        return recycleTipRepository.findByCategoryName(categoryName);
     }
 }

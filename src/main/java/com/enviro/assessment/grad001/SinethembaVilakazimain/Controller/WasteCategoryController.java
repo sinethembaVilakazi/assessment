@@ -20,7 +20,9 @@ public class WasteCategoryController {
     @GetMapping("/category/{categoryName}")
     public ResponseEntity<WasteCategory> getWasteCategory(@PathVariable String categoryName) {
         WasteCategory wasteCategory = wasteCategoryService.getWasteCategoryName(categoryName);
-        return ResponseEntity.ok(wasteCategory);
+        return wasteCategory != null ?
+                ResponseEntity.ok(wasteCategory) :
+                ResponseEntity.notFound().build();
     }
     @GetMapping
     public ResponseEntity<List<WasteCategory>> getAllWasteCategories(){

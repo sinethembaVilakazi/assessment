@@ -20,8 +20,8 @@ public class RecyclingTip {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    private WasteCategory wasteCategory;
+//    @ManyToOne
+//    private WasteCategory wasteCategory;
 
     private  String categoryName;
 
@@ -39,13 +39,13 @@ public class RecyclingTip {
         this.id = id;
     }
 
-    public WasteCategory getWasteCategory() {
-        return wasteCategory;
-    }
-
-    public void setWasteCategory(WasteCategory wasteCategory) {
-        this.wasteCategory = wasteCategory;
-    }
+//    public WasteCategory getWasteCategory() {
+//        return wasteCategory;
+//    }
+//
+//    public void setWasteCategory(WasteCategory wasteCategory) {
+//        this.wasteCategory = wasteCategory;
+//    }
 
     public String getTip() {
         return tip;

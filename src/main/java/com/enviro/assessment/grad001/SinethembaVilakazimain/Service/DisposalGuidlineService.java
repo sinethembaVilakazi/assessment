@@ -18,5 +18,5 @@ public interface DisposalGuidlineService {
 
     void deleteDisposalGuidelines(Long id);
 
-    List<DisposalGuidelines> getDisposalGuidelinesbyWasteCategory(WasteCategory wasteCategory);
+//    List<DisposalGuidelines> getDisposalGuidelinesbyWasteCategory(WasteCategory wasteCategory);
 }

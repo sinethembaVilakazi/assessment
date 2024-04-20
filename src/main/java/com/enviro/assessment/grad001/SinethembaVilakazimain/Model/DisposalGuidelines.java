@@ -8,9 +8,8 @@ import jakarta.validation.constraints.Size;
 @Entity
 public class DisposalGuidelines {
 
-    public DisposalGuidelines(Long id, WasteCategory wasteCategory, String categoryName, boolean hazardous, String disposalMethods) {
+    public DisposalGuidelines(Long id, String categoryName, boolean hazardous, String disposalMethods) {
         this.id = id;
-        this.wasteCategory = wasteCategory;
         this.categoryName = categoryName;
         this.hazardous = hazardous;
         this.disposalMethods = disposalMethods;
@@ -22,8 +21,8 @@ public class DisposalGuidelines {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    private WasteCategory wasteCategory;
+//    @ManyToOne
+//    private WasteCategory wasteCategory;
 
 //    @NotBlank
     private String categoryName;
@@ -44,13 +43,13 @@ public class DisposalGuidelines {
         this.id = id;
     }
 
-    public WasteCategory getWasteCategory() {
-        return wasteCategory;
-    }
-
-    public void setWasteCategory(WasteCategory wasteCategory) {
-        this.wasteCategory = wasteCategory;
-    }
+//    public WasteCategory getWasteCategory() {
+//        return wasteCategory;
+//    }
+//
+//    public void setWasteCategory(WasteCategory wasteCategory) {
+//        this.wasteCategory = wasteCategory;
+//    }
 
     public boolean isHazardous() {
         return hazardous;

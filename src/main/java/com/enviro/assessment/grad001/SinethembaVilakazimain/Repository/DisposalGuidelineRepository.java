@@ -11,11 +11,11 @@ import java.util.Optional;
 @Repository
 public interface DisposalGuidelineRepository extends JpaRepository<DisposalGuidelines,Long> {
     Optional<DisposalGuidelines> findByCategoryName(String categoryName);
-    List<DisposalGuidelines> findByWasteCategory(WasteCategory wasteCategory);
+//    List<DisposalGuidelines> findByWasteCategory(WasteCategory wasteCategory);
 
     List<DisposalGuidelines> findByHazardous(boolean hazardous);
 
 
-    List<DisposalGuidelines> findByWasteCategoryAndHazardous(WasteCategory wasteCategory, boolean hazardous);
+//    List<DisposalGuidelines> findByWasteCategoryAndHazardous(String categoryName, boolean hazardous);
 
 }

@@ -14,6 +14,5 @@ public interface RecyclingTipService {
 
     void deleteRecyclingTip(Long id);
 
-    List<RecyclingTip> getRecyclingTipsByWasteCategory(WasteCategory wasteCategory);
-
+    List<RecyclingTip> getRecyclingTipsByCategoryName(String categoryName);
 }

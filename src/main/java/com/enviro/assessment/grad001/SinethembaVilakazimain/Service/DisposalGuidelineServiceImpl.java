@@ -43,8 +43,8 @@ public class DisposalGuidelineServiceImpl implements DisposalGuidlineService{
 
     }
 
-    @Override
-    public List<DisposalGuidelines> getDisposalGuidelinesbyWasteCategory(WasteCategory wasteCategory) {
-        return disposalGuidelineRepository.findByWasteCategory(wasteCategory);
-    }
+//    @Override
+//    public List<DisposalGuidelines> getDisposalGuidelinesbyWasteCategory(WasteCategory wasteCategory) {
+//        return disposalGuidelineRepository.findByWasteCategory(wasteCategory);
+//    }
 }
