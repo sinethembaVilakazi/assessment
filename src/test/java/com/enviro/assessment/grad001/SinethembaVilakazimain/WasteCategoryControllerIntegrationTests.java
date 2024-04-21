@@ -86,8 +86,6 @@ public class WasteCategoryControllerIntegrationTests {
     public void testDeleteWasteCategory() throws Exception {
         Long categoryId = 4L;
         mockMvc.perform(MockMvcRequestBuilders.delete("/api/waste-category/{id}", categoryId))
-                .andExpect(status().isNoContent()); // Expect HTTP 204 No Content after successful deletion
+                .andExpect(status().isOk()); // Expect HTTP 200 ok status after successful deletion
     }
-
-
 }

@@ -43,8 +43,15 @@ public class WasteCategoryServiceImpl implements WasteCategoryService {
     }
 
     @Override
-    public void deleteWasteCategory(Long id) {
-        wasteCategoryRepository.deleteById(id);
+    public boolean deleteWasteCategory(Long id) {
+        Optional<WasteCategory> optionalWasteCategory = wasteCategoryRepository.findById(id);
+        if (optionalWasteCategory.isPresent()) {
+            wasteCategoryRepository.deleteById(id);
+            return true; // Deletion successful
+        } else {
+            return false; // Category with the given ID not found
+        }
+
     }
 
     @Override

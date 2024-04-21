@@ -22,7 +22,7 @@ public class WasteCategory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @NotBlank
+    @NotBlank
     @Size(max = 200)
     private  String categoryName;
 
@@ -30,7 +30,7 @@ public class WasteCategory {
     @NotNull
     private boolean biodegradable;
 
-//    @NotBlank
+    @NotBlank
     @Size(max = 50)
     private String type;
 

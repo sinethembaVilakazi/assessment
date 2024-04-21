@@ -12,7 +12,7 @@ public interface WasteCategoryService {
 
     WasteCategory updateWasteCategory(Long id,WasteCategory wasteCategory);
 
-    void deleteWasteCategory(Long id);
+    boolean deleteWasteCategory(Long id);
 
     WasteCategory getWasteCategoryName(String categoryName);
 

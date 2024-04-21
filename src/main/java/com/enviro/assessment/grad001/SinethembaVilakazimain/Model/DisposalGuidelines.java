@@ -24,13 +24,13 @@ public class DisposalGuidelines {
 //    @ManyToOne
 //    private WasteCategory wasteCategory;
 
-//    @NotBlank
+    @NotBlank
     private String categoryName;
 
     @NotNull
     private boolean hazardous;
 
-//    @NotBlank
+    @NotBlank
     @Size(max = 500)
     private String disposalMethods;  //disposal methods should be stored in a comma-separated list
 
