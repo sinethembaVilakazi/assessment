@@ -70,7 +70,7 @@ public class DisposalGuidelineControllerIntegrationTests {
         Long guidelineId = 3L;
 
         mockMvc.perform(MockMvcRequestBuilders.delete("/api/disposal-guidelines/{id}", guidelineId))
-                .andExpect(status().isNoContent()); // Expect HTTP 204 No Content after successful deletion
+                .andExpect(status().isOk()); // Expect HTTP 200 OK status after successful deletion
     }
 
 

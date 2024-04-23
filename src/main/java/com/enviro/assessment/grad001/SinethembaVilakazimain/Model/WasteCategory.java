@@ -8,16 +8,6 @@ import jakarta.validation.constraints.Size;
 @Entity
 @Table(name = "waste_categories")
 public class WasteCategory {
-    public WasteCategory(Long id, String categoryName, boolean biodegradable, String type) {
-    this.id = id;
-    this.categoryName = categoryName;
-    this.biodegradable = biodegradable;
-    this.type = type;
-}
-    public WasteCategory(){
-
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -34,6 +24,28 @@ public class WasteCategory {
     @Size(max = 50)
     private String type;
 
+    /**
+     * Constructs a new WasteCategory object.
+     * @param id The unique identifier of the waste category.
+     * @param categoryName The name of the waste category.
+     * @param biodegradable Indicates if the waste is biodegradable.
+     * @param type The type of waste category.
+     */
+    public WasteCategory(Long id, String categoryName, boolean biodegradable, String type) {
+        this.id = id;
+        this.categoryName = categoryName;
+        this.biodegradable = biodegradable;
+        this.type = type;
+    }
+
+    /**
+     * Default constructor for WasteCategory (used by JPA).
+     */
+    public WasteCategory(){
+
+    }
+
+
     public Long getId() {
         return id;
     }
@@ -42,10 +54,19 @@ public class WasteCategory {
         this.id = id;
     }
 
+
+    /**
+     * Retrieves the name of the waste category.
+     * @return The name of the waste category.
+     */
     public String getCategoryName() {
         return categoryName;
     }
 
+    /**
+     * Sets the name of the waste category.
+     * @param categoryName The name to set.
+     */
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
     }

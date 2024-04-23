@@ -5,9 +5,20 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
+/**
+ * Entity class representing disposal guidelines for waste categories.
+ */
 @Entity
 public class DisposalGuidelines {
 
+    /**
+     * Parameterized constructor.
+     *
+     * @param id               The ID of the disposal guideline.
+     * @param categoryName     The name of the waste category.
+     * @param hazardous        Flag indicating if the waste is hazardous.
+     * @param disposalMethods  Methods of disposal (comma-separated list).
+     */
     public DisposalGuidelines(Long id, String categoryName, boolean hazardous, String disposalMethods) {
         this.id = id;
         this.categoryName = categoryName;

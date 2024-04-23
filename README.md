@@ -20,12 +20,17 @@ tips display.
 ## Usage
 1.**Build the Project:**
  ```bash
- mvn clean package
+ mvn clean
    ```
 2.**Start the Application:**
- ```bash
- mvn spring-boot:run
-   ```
+To run this project locally, follow these steps:
+
+- Clone the repository to your local machine.
+- Open the project in your preferred Java development environment (IDE).
+- Make sure you have Java and Spring Boot set up.
+- Configure database settings in application.properties.
+- Run the SinethembaVilakaziMainApplication.java file to start the Spring Boot application.
+
 3.**Access the API Endpoints:**
 - Open your web browser or API testing tool such as Postman.
 - Use the provided endpoints to interact with the application.
@@ -133,7 +138,15 @@ endpoints for the `WasteCategory`, `DisposalGuidelines`, and `RecyclingTip` enti
 
 
 ## Testing
-```bash
-   mvn test
-   ```
+This project includes various tests to ensure code quality and functionality:
+
+1. Unit Tests: Tests individual units of code, such as methods or classes, in isolation.
+2. Integration Tests: Tests interactions between different parts of the system, such as controllers and services.
+3. Main Application Tests: Tests for the main application logic and behavior.
+
+**To run the tests:**
+
+- Navigate to the src/test/java directory in your IDE.
+- Right-click on the test file or package you want to run.
+- Select "Run" or "Run as" to execute the tests.
 

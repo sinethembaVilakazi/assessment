@@ -12,6 +12,10 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+
+/**
+ * Component to initialize data during application startup.
+ */
 @Component
 public class DataInitializer implements ApplicationRunner {
     @Autowired
@@ -23,6 +27,12 @@ public class DataInitializer implements ApplicationRunner {
     @Autowired
     private  RecycleTipRepository recycleTipRepository;
 
+    /**
+     * Method to run the data initialization process during application startup.
+     *
+     * @param args The ApplicationArguments passed to the application.
+     * @throws Exception If an error occurs during data initialization.
+     */
     @Override
     public void run(ApplicationArguments args) throws Exception {
         // Populate waste categories and disposal guidelines during application startup

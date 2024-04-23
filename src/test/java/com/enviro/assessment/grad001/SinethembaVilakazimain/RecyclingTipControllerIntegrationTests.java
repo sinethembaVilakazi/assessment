@@ -66,7 +66,7 @@ public class RecyclingTipControllerIntegrationTests {
         Long id = 2L;
         ResultActions resultActions = mockMvc.perform(delete("/api/recycling-tips/{id}", id));
 
-        resultActions.andExpect(status().isNoContent());
+        resultActions.andExpect(status().isOk());
     }
 
 

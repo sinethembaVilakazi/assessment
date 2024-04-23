@@ -8,10 +8,19 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Implementation of the WasteCategoryService interface that provides CRUD operations for WasteCategory entities.
+ */
 @Service
 public class WasteCategoryServiceImpl implements WasteCategoryService {
     @Autowired
     private WasteCategoryRepository wasteCategoryRepository;
+
+
+    /**
+     * Constructs a WasteCategoryServiceImpl with the provided WasteCategoryRepository.
+     * @param wasteCategoryRepository The repository to use for database operations.
+     */
     public WasteCategoryServiceImpl(WasteCategoryRepository wasteCategoryRepository) {
         this.wasteCategoryRepository = wasteCategoryRepository;
     }
